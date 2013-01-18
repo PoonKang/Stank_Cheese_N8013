@@ -10,9 +10,13 @@ adb push boot.img /sdcard/boot.img
 
 # Flash the boot
 adb shell
+
 cd sdcard
+
 su
+
 dd if=boot.img of=/dev/block/mmcblk0p5 bs=1024
+
 adb reboot
 
 May also tar and flash in PDA section of Odin! Enjoy!
